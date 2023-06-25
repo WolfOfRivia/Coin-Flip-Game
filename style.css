@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.coin-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 25rem;
+  margin-bottom: 2rem;
+}
+
+.coin-box .coin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+  width: 12rem;
+  border: 1px solid rgb(77, 73, 73);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  transform: rotateZ(1deg);
+}
+
+.game-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 25rem;
+}
+
+.game-score {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.score-box {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.score-box .score-counter {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.game-control-btn {
+  padding: 0.8rem 2rem;
+  border: 2px solid #d1d1d1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+/*
+https://codepen.io/mlhaufe/pen/vOQyYb
+*/

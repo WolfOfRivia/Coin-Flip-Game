@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Coin Flip</title>
+</head>
+<body>
+  <div class="container">
+    <div class="coin-box">
+      <div class="coin">
+        <p>Heads</p>
+      </div>
+    </div>
+    <div class="game-box">
+      <h1 id="game-winner"></h1>
+      <div class="game-score">
+        <div id="heads-box" class="score-box">
+          <span class="score-counter">0</span>
+          <span class="score-box-label">Heads</span>
+        </div>
+        <div id="tails-box" class="score-box">
+          <span class="score-counter">0</span>
+          <span class="score-box-label">Tails</span>
+        </div>
+      </div>
+      <div class="game-controls">
+        <button id="start" class="game-control-btn">Flip Coin</button>
+        <button id="restart" class="game-control-btn">Restart</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
