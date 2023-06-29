@@ -8,6 +8,11 @@
 body {
   font-family: 'Nunito', sans-serif;
   height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
 .container {
@@ -58,7 +63,8 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 2rem 1rem;
-  border: 2px solid #d1d1d1;
+  background-color: rgba(18, 19, 140, 0.4);
+  backdrop-filter: blur(5px);
   border-radius: 1rem;
   width: 100%;
   max-width: 25rem;
@@ -92,6 +98,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(4, 4, 50, 0.9);
+  border-radius: 0.5rem;
+  min-width: 5rem;
 }
 
 .score-box .score-counter {
@@ -99,12 +108,27 @@ body {
   font-weight: 700;
 }
 
+.game-controls {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 2rem;
+  margin: 0 -0.5rem;
+}
+
 .game-control-btn {
   padding: 0.8rem 2rem;
-  border: 2px solid #d1d1d1;
+  border: 2px solid #fff;
   border-radius: 0.5rem;
   cursor: pointer;
-  margin: 0 0.5rem;
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.game-control-btn:hover {
+  background-color: rgba(52, 143, 194, 1);
+  border: 2px solid rgba(52, 143, 194, 1);
 }
 
 
