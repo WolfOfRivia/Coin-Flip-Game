@@ -19,24 +19,37 @@ body {
 }
 
 .coin-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   width: 100%;
-  max-width: 25rem;
+  height: 12rem;
+  max-width: 12rem;
   margin-bottom: 2rem;
 }
 
 .coin-box .coin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
   height: 12rem;
   width: 12rem;
-  border: 1px solid rgb(77, 73, 73);
-  border-radius: 50%;
-  transition: all 0.5s ease;
-  transform: rotateZ(1deg);
+  z-index: 1;
+}
+
+.coin.heads.flip {
+  animation: flip-head 0.28s linear 0s infinite alternate;
+}
+
+.coin.tails.flip {
+  animation: flip-tail 0.28s linear 0s infinite alternate;
+}
+
+.coin.winning-coin {
+  z-index: 5
+}
+
+#game-winner {
+  margin-bottom: 1rem;
 }
 
 .game-box {
@@ -45,10 +58,24 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 2rem 1rem;
-  border: 1px solid #d1d1d1;
+  border: 2px solid #d1d1d1;
   border-radius: 1rem;
   width: 100%;
   max-width: 25rem;
+}
+
+#game-setting {
+  width: 100%;
+  max-width: 15.8rem;
+  margin: 0 auto;
+}
+
+#game-setting .form-input {
+  padding: 0.8rem 1rem;
+  appearance: none;
+  width: 100%;
+  border: 2px solid #d1d1d1;
+  border-radius: 0.5rem;
 }
 
 .game-score {
@@ -78,6 +105,17 @@ body {
   border-radius: 0.5rem;
   cursor: pointer;
   margin: 0 0.5rem;
+}
+
+
+@keyframes flip-head {
+  0%, 100% { transform: rotateX(0deg); }
+  50% { transform: rotateX(180deg); }
+}
+
+@keyframes flip-tail {
+  0%, 100% { transform: rotateX(180deg); }
+  50% { transform: rotateX(0deg); }
 }
 
 /*
